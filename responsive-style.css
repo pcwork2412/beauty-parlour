@@ -1,0 +1,199 @@
+@media (max-width: 1200px) {}
+
+/* ******media query for x-large screen(pc)******* */
+@media (max-width:1030px) {
+
+    /* =====Header Section Start==== */
+    .header .navbar-nav a.nav-link {
+        padding: 0.8rem 1rem;
+    }
+
+    /* =====Header Section End==== */
+
+    /* =====Banner Section Start==== */
+    .banner-content h4 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-top: 6rem;
+    }
+    .banner-content h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 1rem 0;
+        width: 90%;
+        /* border: 2px solid black; */
+    }
+    .banner-content p {
+        font-size: 1rem;
+        letter-spacing: 0rem;
+    }
+    .banner-content .main-btn {
+        margin-top: 1rem;
+        padding: 0.8rem 1.1rem;
+    }
+    .bg-hero {
+        min-height: 380px;
+    }
+    /* =====Banner Section End==== */
+
+
+
+}
+/* ******media query for large screen(ipad)******* */
+@media (max-width:992px) {
+
+    /* Header Section Start */
+    .menu-toggle {
+        position: relative;
+    }
+    .menu-toggle span {
+        width: 2rem;
+        height: 0.2rem;
+        display: block;
+        background: var(--primary-color);
+        margin: 0.35rem;
+        transition: all 0.3s;
+    }
+   .navbar-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        /* height: 100vh; */
+        width: 100%;
+        background-color: antiquewhite;
+        display: block;
+        text-align: center;
+    }
+    .header .navbar-nav a.nav-link {
+        display: inline-block;
+        font-size: 25px;
+    }
+    .header .navbar-nav a.nav-link:hover::after,
+    .header .navbar-nav a.nav-link.active::after {
+        width: 150px;
+    }
+    .search-bar {
+        display: none;
+    }
+    .bars {
+        display: inline-block;
+    }
+    
+    /* Header Section End */
+
+
+    /* =====Banner Section Start==== */
+    .banner-content h4 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-top: 4rem;
+
+    }
+    .banner-content h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 1rem 0;
+        width: 100%;
+        /* border: 2px solid black; */
+    }
+
+    .banner-content p {
+        font-size: 1.1rem;
+        letter-spacing: 0rem;
+    }
+
+    .banner-content .main-btn {
+        margin-top: 1rem;
+        padding: 0.8rem 1.1rem;
+    }
+
+    .bg-hero {
+        min-height: 180px;
+        transition: none;
+    }
+    /* =====Banner Section End==== */
+
+
+    /* ==== Gallery Section Start==== */
+    .gallery .gallery-nav ul{
+        flex-wrap: wrap;
+    }
+    .gallery-img-row .img-box img{
+        width: 100%;
+        margin: auto;
+    }
+    /* ==== Gallery Section End==== */
+
+
+     /* ==== footer Section Start==== */
+     .footer-widget-tittle {
+        margin-top: 4rem;
+    }
+    /* ==== footer Section End==== */
+}
+
+/* ************* media query for Medium screen ************** */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+    }
+}
+
+
+/* ******media query for small screen(Mobile)******* */
+@media (max-width: 576px) {
+
+
+    /* =====Banner Section Start==== */
+    .banner-content {
+        text-align: center;
+    }
+
+    .banner-content h4 {
+        font-weight: 900;
+        font-size: 2rem;
+        padding-top: 4rem;
+    }
+    .banner-content h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding: 1rem 0;
+        width: 100%;
+        /* border: 2px solid black; */
+    }
+    .banner-content p {
+        font-size: .8rem;
+        letter-spacing: 0.015rem;
+        font-weight: 400;
+    }
+    .banner-content .main-btn {
+        margin-top: 0.8rem;
+        padding: 0.8rem 1.1rem;
+    }
+  .bg-hero {
+        min-height: 180px;
+        transition: none;
+    }
+    .banner-content .main-btn {
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+    }
+  
+    /* =====Banner Section End==== */
+        /* ==== Gallery Section Start==== */
+        .gallery .gallery-nav ul{
+            flex-wrap: wrap;
+        }
+        .gallery-img-row .img-box img{
+            width: 100%;
+            margin: auto;
+        }
+        /* ==== Gallery Section End==== */
+
+
+        /* ==== footer Section Start==== */
+        .footer-widget-tittle {
+            margin-top: 4rem;
+        }
+        /* ==== footer Section End==== */
+}

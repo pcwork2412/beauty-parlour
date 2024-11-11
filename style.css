@@ -1,0 +1,916 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* body{
+  background-color: rgba(223, 169, 178, 0.404);
+} */
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2c3145;
+  text-transform: capitalize;
+}
+
+/* ========= Define Variable=========== */
+:root {
+  --primary-color: #000;
+  --secondary-color: #9f5ba4;
+  --third-color: #f3f3f3;
+  --four-color: #848484;
+  --text-color: #fff;
+  --black-light-color: #2f2f2f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====Header CSS==== */
+/* .header {
+  background-color: var(--text-color);
+  z-index: 100;
+  padding: 0.625rem;
+  }
+  
+  .header .navbar-nav a.nav-link {
+  position: relative;
+  padding: 0.8rem 0.95rem;
+  font-weight: 400;
+  font-size: 1.155rem;
+  color: var(--primary-color);
+  transition: font-weight 0.3s ease-in-out;
+  -webkit-transition: font-weight 0.3s ease-in-out;
+  -moz-transition: font-weight 0.3s ease-in-out;
+  -os-transition: font-weight 0.3s ease-in-out;
+  -o-transition: font-weight 0.3s ease-in-out;
+}
+
+.header .navbar-nav a.nav-link.active {
+  font-weight: 600;
+  transition: font-weight 0.3s ease-in-out;
+}
+
+.header .navbar-nav a.nav-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 0.1rem;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  transition: 0.3s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  }
+
+.header .navbar-nav a.nav-link:hover::after,
+.header .navbar-nav a.nav-link.active::after {
+  width: 40%;
+  transition: width 0.3s;
+}
+
+.header .navbar-toggler {
+  padding: 0.25rem 0rem;
+}
+
+.search-bar {
+  padding: 0.8rem 1.2rem;
+}
+
+.search-bar a {
+  color: var(--primary-color);
+  padding-right: 1rem;
+}
+
+.bars {
+  display: none;
+  /* font-size: 40px; */
+/* } */
+/* .icons{ */
+/* margin: 1rem; */
+/* padding-right: 1rem; */
+/* } */
+
+/* <!--================ NAVBAR  CSS Start================ --> */
+.nav-box{
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+
+
+.navbar .btn {
+  margin-left: 10px;
+}
+
+/* Make the nav-links horizontally scrollable */
+.navbar-nav {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 5px;
+  margin-left: auto;
+}
+
+/* Style for the nav-link underline */
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  margin-right: 15px;
+}
+
+/* The underline (initially hidden) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Active state: show the underline */
+.nav-link.active::after {
+  background-color: var(--secondary-color);
+  transform: scaleX(1);
+}
+
+
+/* <!--================ Sidebar  CSS Start================ --> */
+
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -350px; /* Hidden by default */
+  z-index: 1;
+  transition: left 0.8s ease;
+  background-color: #d6007dc4;
+  opacity: 0.95;
+  color: white;
+}
+
+.sidebar h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  color: #f3f3f3;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 2rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: var(--secondary-color);
+}
+/* <!--================ Sidebar toggle button ================ --> */
+.navbar-toggler-icon {
+  font-size: 1.5rem;
+}
+/* Custom focus style for the button */
+.btn-custom:focus {
+  box-shadow: 0 0 5px 3px rgba(255, 105, 180, 0.6); /* Pink glow effect */
+  color: white; /* White text */
+}
+/* <!--================ Sidebar  CSS End================ --> */
+
+/* ==================== Banner Section Start ==================== */
+
+/* Banner css */
+.bg-hero {
+  background-image: url(images/slider01.jpg);
+  min-height: 580px;
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(68% 0, 100% 0, 100% 97%, 3% 100%, 0 100%, 0 0);
+  animation: xfade 18s 3s infinite alternate;
+  transition: all 4s ease-in-out;
+  -webkit-transition: all 4s ease-in-out;
+  -moz-transition: all 4s ease-in-out;
+  -o-transition: all 4s ease-in-out;
+  -ms-transition: all 4s ease-in-out;
+}
+
+@keyframes xfade {
+  0% {
+    background-image: url(images/slider01.jpg);
+  }
+
+  25% {
+    background-image: url(images/slider02.jpg);
+  }
+
+  50% {
+    background-image: url(images/slider03.jpg);
+  }
+
+  75% {
+    background-image: url(images/slider04.jpg);
+  }
+
+  100% {
+    background-image: url(images/slider05.jpg);
+  }
+}
+
+/* Banner CSS End */
+
+/* Banner Content Satrt */
+.banner-content h4 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding-top: 8rem;
+  color: var(--secondary-color);
+}
+
+.banner-content h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  width: 80%;
+}
+
+.banner-content .main-btn {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  /* clip-path: polygon(); */
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+.banner-content .main-btn:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  box-shadow: 0 0 15px 6px rgba(153, 149, 149, 0.55);
+  font-weight: 700;
+}
+
+.banner-content p {
+  font-size: 1.1rem;
+  letter-spacing: 0.02rem;
+}
+
+/* Banner Content End */
+
+/* ======bg-Hero Section End====== */
+
+/* =======Services Section Start========= */
+/* service section head */
+.Services {
+  padding-top: 6rem;
+}
+
+.section-head {
+  margin-bottom: 4rem;
+}
+
+.section-head span {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-head h4 {
+  position: relative;
+  padding: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: none;
+  margin-bottom: 1.875rem;
+}
+
+.section-head h4::before {
+  content: "";
+  width: 3.75rem;
+  height: 0.188rem;
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.section-head h4 span {
+  font-weight: 700;
+  padding: 0.31rem;
+  color: var(--black-light-color);
+}
+
+.section-head p {
+  color: var(--black-light-color);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+/* Serivce Box  */
+.service-item {
+  box-shadow: 0 0 0.8rem rgba(0, 0, 1.563, 0.7);
+  background-color: var(--text-color);
+  border-radius: 1.25rem;
+  text-align: center;
+  padding: 0.875rem 0.563rem;
+  margin-bottom: 1.85rem;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.service-item:hover {
+  background-color: var(--secondary-color);
+
+  box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0, 0.2);
+}
+
+.Service-price {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* button effect on service box */
+.service-box .img-box {
+  position: relative;
+  width: 12.625rem;
+  height: 12.55rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* button on image */
+.service-box .img-box .box-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  padding: 0 15px;
+  z-index: 2;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.service-box:hover .img-box .box-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Hover Effect On Buttom */
+
+.service-box .img-box .content .boxed-btn {
+  border-radius: 20px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  padding: 0.85rem 1.15rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.service-box .img-box .content .boxed-btn:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Hover Effect On Image */
+.service-box .img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #2c3145;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  transform: scale(0);
+}
+
+.service-box:hover .img-box::after {
+  opacity: 0.7;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.service-item:hover h5,
+.service-item:hover p,
+.service-item:hover h4,
+.service-item:hover .Service-price {
+  color: var(--text-color);
+  transition: all0.4s ease 0s;
+}
+
+.service-item h5 {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* =======Services Section End========= */
+
+/* ======Our Feature  Section Start======= */
+
+/* Our Feature bg-image */
+.feature {
+  background-image: url(images/feature-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 8rem;
+}
+
+/* .feature-box{
+  border: 2px solid blue;
+} */
+/* our feature icon effects */
+.feature-icon {
+  width: 5.31rem;
+  height: 5.31rem;
+  line-height: 5.31rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background-color: rgba(104, 99, 99, 0.377);
+  border: 1px solid #675d66;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.feature-box:hover .feature-icon {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transform: scale(1);
+}
+
+/* Our Feature Content */
+.feature-box h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--third-color);
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--third-color);
+  letter-spacing: 0.06rem;
+}
+
+/* ======Our Feature  Section End======= */
+
+/* ======Our Pricing  Section Start======= */
+/* price content */
+.price-content {
+  border: 2px solid rgba(0, 0, 0, 0.267);
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 28px;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+
+.price-content:hover {
+  box-shadow: 0 0 5px 10px rgba(187, 183, 183, 0.7);
+  transform: translatey(-15px);
+}
+
+.price-card-2 {
+  border: 3px solid var(--secondary-color);
+}
+
+.price-content h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.price-content h6 span {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.price-content h2,
+.price-content h3,
+.price-content h4,
+.price-content h5 {
+  font-size: 1.25rem;
+  color: var(--black-light-color);
+}
+
+.price-content button {
+  color: var(--secondary-color);
+  border: 2.5px solid var(--secondary-color);
+  border-radius: 5rem;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.price-content button:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* ======Our Pricing  Section End======= */
+
+/* ======Our Gallery Heading Buttons  Section Start======= */
+/* .gallery .gallery-nav ul li,
+.gallery .gallery-nav ul li a {
+  list-style: none;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-color);
+  border: 2px solid blue;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 0.55rem 0.55rem;
+  border: none;
+}
+
+.gallery .gallery-nav ul li a:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  box-shadow: 0 0 5px 5px rgba(153, 149, 149, 0.26);
+}*/
+.gallery-btn .btn-color {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+/*============= Gallery Images Section =============*/
+/* .img-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+} */
+/* .img-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery-img-row .img-box img {
+  width: 100%;
+  height: 300px;
+  border: 2px solid rgb(153, 149, 149);
+  margin: 15px;
+  cursor: pointer;
+}
+
+.gallery-img-row .img-box img:hover {
+  transition: all 0.5s;
+  transform: translatey(-8%);
+  box-shadow: 0 0 15px 6px rgba(153, 149, 149, 0.973);
+} */
+/*============= Gallery image hover effect =============*/
+#gallery img {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+#gallery img:hover {
+  transform: scale(1.05);
+}
+/* Button active state */
+.filter-btn.active {
+  /* opacity: 0.8; */
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  /* border: 2px solid var(--black-light-color); */
+  box-shadow: 0.1px 2px 8px 0 var(--black-light-color);
+}
+
+/* ======Our Gallery  Section End======= */
+
+/* ======Our Experts  Section Start======= */
+
+/* without slider CSS */
+.our-company {
+  padding-bottom: 5rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px;
+}
+
+.our-team {
+  text-align: center;
+  position: relative;
+  color: var(--text-color);
+}
+
+.our-team img {
+  width: 100%;
+}
+
+.our-team .team-content {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 45%;
+  transform: perspective(25rem) rotatex(-90deg);
+  transform-origin: center top 0;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+
+.our-team:hover .team-content,
+.our-team:active .team-content {
+  opacity: 1;
+  transform: perspective(25rem) rotateX(0deg);
+}
+
+.team-content .title {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.team-content .post {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 1.5rem;
+  display: inline-block;
+}
+
+.team-content .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.team-content .social-1,
+.team-content .social-2,
+.team-content .social-3 {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+/* ======Our Experts  Section End======= */
+
+/* ======Footer  Section start======= */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer-widget .widget-about {
+  padding-right: 3rem;
+}
+
+.footer-widget .footer-menu h4,
+.footer-widget .footer-menu ul li,
+.footer-widget .footer-menu ul li a {
+  color: var(--text-color);
+  list-style: none;
+}
+
+.footer-widget .footer-menu ul li {
+  font-size: 1.1rem;
+  padding-top: 1.2rem;
+}
+
+.footer-widget .footer-menu ul li a:hover {
+  color: var(--secondary-color);
+  transition: all 0.2s;
+}
+
+.footer-menu .input-group-btn .site-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  outline: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  line-height: 1.42857;
+  border-radius: 0px 0.25rem 0.25rem 0;
+  margin-top: 1rem;
+}
+
+.footer-widget .footer-menu .input-group input {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* ===================social icons CSS=================== */
+.footer-widget .footer-menu .social-detail li {
+  display: inline-block;
+  margin: 2rem 0.5rem;
+}
+
+.footer-widget .footer-menu .social-detail li a i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.8rem;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-detail li a i:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-0.5rem);
+  color: var(--text-color);
+}
+
+/* Mini Footer CSS */
+.mini-footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  border-top: 2px solid var(--black-light-color);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mini-footer h6 {
+  color: var(--text-color);
+}
+
+.mini-footer a {
+  color: var(--secondary-color);
+}
+/* ======Footer  Section End======= */
+
+/* Sidebar Styling */
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -350px; /* Hidden by default */
+  z-index: 1;
+  transition: left 0.8s ease;
+  background-color: #d6007dc4;
+  opacity: 0.95;
+  color: white;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+  color: #f3f3f3;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #4caf50;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.open-btn {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  padding: 5px 10px;
+  background-color: #212227;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
