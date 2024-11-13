@@ -69,78 +69,10 @@ ol {
   padding: 0;
 }
 
-/* ====Header CSS==== */
-/* .header {
-  background-color: var(--text-color);
-  z-index: 100;
-  padding: 0.625rem;
-  }
-  
-  .header .navbar-nav a.nav-link {
-  position: relative;
-  padding: 0.8rem 0.95rem;
-  font-weight: 400;
-  font-size: 1.155rem;
-  color: var(--primary-color);
-  transition: font-weight 0.3s ease-in-out;
-  -webkit-transition: font-weight 0.3s ease-in-out;
-  -moz-transition: font-weight 0.3s ease-in-out;
-  -os-transition: font-weight 0.3s ease-in-out;
-  -o-transition: font-weight 0.3s ease-in-out;
-}
-
-.header .navbar-nav a.nav-link.active {
-  font-weight: 600;
-  transition: font-weight 0.3s ease-in-out;
-}
-
-.header .navbar-nav a.nav-link::after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 0.1rem;
-  box-sizing: border-box;
-  background-color: var(--primary-color);
-  transition: 0.3s;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: 0;
-  }
-
-.header .navbar-nav a.nav-link:hover::after,
-.header .navbar-nav a.nav-link.active::after {
-  width: 40%;
-  transition: width 0.3s;
-}
-
-.header .navbar-toggler {
-  padding: 0.25rem 0rem;
-}
-
-.search-bar {
-  padding: 0.8rem 1.2rem;
-}
-
-.search-bar a {
-  color: var(--primary-color);
-  padding-right: 1rem;
-}
-
-.bars {
-  display: none;
-  /* font-size: 40px; */
-/* } */
-/* .icons{ */
-/* margin: 1rem; */
-/* padding-right: 1rem; */
-/* } */
-
 /* <!--================ NAVBAR  CSS Start================ --> */
-.nav-box{
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
-
-
+.nav-box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
 .navbar .btn {
   margin-left: 10px;
 }
@@ -181,10 +113,9 @@ ol {
   transform: scaleX(1);
 }
 
-
 /* <!--================ Sidebar  CSS Start================ --> */
 
-}
+/* Sidebar Styling */
 
 /* Sidebar Styling */
 .sidebar {
@@ -202,39 +133,65 @@ ol {
 }
 
 .sidebar h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
+  margin-bottom: 10px;
   color: #f3f3f3;
 }
 
 .sidebar ul {
   list-style-type: none;
+  margin-left: 2rem;
 }
-
 .sidebar ul li {
-  margin: 2rem 0;
+  margin: 2px 0;
+}
+.sideli {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.199);
+  }
 }
 
 .sidebar ul li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 18px;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-  color: var(--secondary-color);
+  color: #000000;
 }
-/* <!--================ Sidebar toggle button ================ --> */
-.navbar-toggler-icon {
+
+/* Main Content Styling */
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.open-btn {
+  padding: 5px 10px;
   font-size: 1.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-/* Custom focus style for the button */
-.btn-custom:focus {
-  box-shadow: 0 0 5px 3px rgba(255, 105, 180, 0.6); /* Pink glow effect */
-  color: white; /* White text */
+
+.close-btn {
+  padding: 5px 10px;
+  background-color: #212227;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  &:hover {
+    background-color: rgb(255, 0, 0);
+  }
 }
+
 /* <!--================ Sidebar  CSS End================ --> */
 
 /* ==================== Banner Section Start ==================== */
@@ -848,69 +805,3 @@ ol {
   color: var(--secondary-color);
 }
 /* ======Footer  Section End======= */
-
-/* Sidebar Styling */
-.sidebar {
-  width: 350px;
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: -350px; /* Hidden by default */
-  z-index: 1;
-  transition: left 0.8s ease;
-  background-color: #d6007dc4;
-  opacity: 0.95;
-  color: white;
-}
-
-.sidebar h2 {
-  margin-bottom: 10px;
-  color: #f3f3f3;
-}
-
-.sidebar ul {
-  list-style-type: none;
-}
-
-.sidebar ul li {
-  margin: 20px 0;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-  color: #4caf50;
-}
-
-/* Main Content Styling */
-.main-content {
-  flex-grow: 1;
-  transition: margin-left 0.3s ease;
-}
-
-.open-btn {
-  padding: 5px 10px;
-  font-size: 1.5rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.close-btn {
-  padding: 5px 10px;
-  background-color: #212227;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
