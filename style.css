@@ -58,9 +58,13 @@ body {
   font-weight: 400;
 }
 
-a,
-a:hover {
+a{
+  color: #ffffff;
   text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    color: var(--primary-color);
+  }
 }
 
 ul,
