@@ -116,7 +116,10 @@ ol {
   background-color: var(--secondary-color);
   transform: scaleX(1);
 }
-
+#signup{
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
 /* <!--================ Sidebar  CSS Start================ --> */
 
 /* Sidebar Styling */
